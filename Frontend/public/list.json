@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "john doe",
-        "catageries": "paid",
+        "category": "paid",
         "title" : "The old lady",
         "prize" : 76,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -11,7 +11,7 @@
     {
         "id" : 2,
         "name" : "john doe",
-        "catageries": "paid",
+        "category": "paid",
         "title" : "The old lady",
         "prize" : 45,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -20,7 +20,7 @@
     {
         "id" : 3,
         "name" : "john doe",
-        "catageries": "free",
+        "category": "free",
         "title" : "The old lady",
         "prize" : 0,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -30,7 +30,7 @@
     {
         "id" : 4,
         "name" : "john doe",
-        "catageries": "free",
+        "category": "free",
         "title" : "The old lady",
         "prize" : 0,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -40,7 +40,7 @@
     {
         "id" : 5,
         "name" : "john doe",
-        "catageries": "free",
+        "category": "free",
         "title" : "qismat",
         "prize" : 0,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -50,7 +50,7 @@
     {
         "id" : 6,
         "name" : "john doe",
-        "catageries": "free",
+        "category": "free",
         "title" : "dum and dumber",
         "prize" : 0 ,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"
@@ -59,7 +59,7 @@
     {
         "id" : 7,
         "name" : "john doe",
-        "catageries": "free",
+        "category": "free",
         "title" : "rich dad poop dad",
         "prize" : 0,
         "image" : "https://img.freepik.com/free-photo/realistic-old-book-blue-background_23-2151359545.jpg?t=st=1728983829~exp=1728987429~hmac=db6c55297cca577b7969fc0e2de366c9b294ce17a61a4183cd475a6efec75291&w=996"

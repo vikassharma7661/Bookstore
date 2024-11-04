@@ -6,9 +6,10 @@ function Contect() {
   return (
     <>
       <Navbar />
-      <div className="h-screen flex justify-center items-center bg-gray-50">
+      
+      <div className="h-screen flex justify-center items-center bg-gray-50 dark:bg-slate-900">
         {/* Adjusted width and height */}
-        <div className='border border-gray-200 shadow-lg duration-200 rounded-lg w-full max-w-lg h-auto p-8 bg-white'>
+        <div className='border border-gray-200 shadow-lg duration-200 rounded-lg w-full max-w-lg h-auto p-8  dark:bg-slate-900'>
           <h1 className='text-4xl font-bold text-blue-600 mb-6 text-center'>Contact Us</h1>
 
           

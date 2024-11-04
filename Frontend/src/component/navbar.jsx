@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './app.css'
 import Login from './Login';
+import { useAuth } from '../context/AuthProvider';
+// import logOut from './logOut';
+import LogOut from './logOut.jsx';
 function Navbar() {
+
+const [authUser,setAuthUser]=useAuth()
+console.log(authUser)
+
   const [theme,settheme]=useState(localStorage.getItem('theme')? localStorage.getItem("dark"):'light')
   const element = document.documentElement;
   useEffect(()=>{
@@ -37,8 +44,6 @@ useEffect(() => {
     window.removeEventListener('scroll', scrollHandler);
   };
 }, []);
-
-
   const listitems = (
     <>
       <li className='text-2xl'>
@@ -51,7 +56,7 @@ useEffect(() => {
         <a href="contectus">Contact Us</a>
       </li>
       <li className='text-2xl'>
-        <a href="#">About</a>
+        <a href="about">About</a>
       </li>
     </>
   );
@@ -78,7 +83,7 @@ useEffect(() => {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 {listitems}
               </ul>
             </div>
@@ -96,7 +101,7 @@ useEffect(() => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="input input-bordered w-64 bg-white"
+                  className="input input-bordered w-64 bg-white dark:text-black"
                 />
                 <button className="btn btn-ghost btn-circle">
                   <svg
@@ -116,14 +121,17 @@ useEffect(() => {
             </div>
 
             <label className="swap swap-rotate">
-              <input type="checkbox" className="theme-controller" value="synthwave" />
+              <input type="checkbox" className="theme-controller" value="synthwave"
+                 onChange={()=>settheme(theme==="dark"?"light":'dark')}
+                 checked={theme === "dark"}
+              />
 
               {/* Sun icon */}
               <svg
                 className="swap-off h-10 w-10 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                onClick={()=>settheme(theme==="dark"?"light":'dark')}
+             
                 >
   
                 <path 
@@ -135,18 +143,22 @@ useEffect(() => {
                 className="swap-on h-10 w-10 fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                onClick={()=>settheme(theme==="light"?"dark":'light')}
 
                 >
                 <path
                   d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
             </label>
-            <div className="btn btn-secondary" onClick={()=> document.getElementById('my_modal_3').showModal()}>
-              login
-            
-              </div>
-              <Login/>
+{
+  authUser?<LogOut/>:
+  <div className=''>
+  <a className="btn btn-secondary" onClick={()=> document.getElementById('my_modal_3').showModal()}>
+    Login
+    </a>
+    <Login/>
+    </div>
+}
+           
           </div>
         </div>
       </div>
